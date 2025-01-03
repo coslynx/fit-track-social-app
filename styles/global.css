@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  @apply bg-gray-100 text-gray-800 font-sans antialiased;
+}
+
+h1 {
+  @apply text-3xl font-bold mb-4;
+}
+
+h2 {
+  @apply text-2xl font-semibold mb-3;
+}
+
+h3 {
+  @apply text-xl font-medium mb-2;
+}
+
+p {
+  @apply text-base mb-3;
+}
+
+a {
+  @apply text-blue-500 hover:underline;
+}
+
+/* Layout Styles */
+.container {
+    @apply mx-auto px-4;
+}
+
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+.flex-col-center {
+    @apply flex flex-col items-center justify-center;
+}
+
+.flex-between {
+    @apply flex items-center justify-between;
+}
+
+
+/* Form Styles */
+
+label {
+    @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    @apply block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring;
+}
+
+
+.input-error {
+    @apply text-red-500 text-sm mt-1;
+}
+
+/* Button Styles */
+.btn {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline;
+}
+
+/* Error message styles */
+.error-message {
+    @apply text-red-500 text-sm mt-2;
+}
+
+/* Accessibility Styles */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus {
+    @apply outline-none ring ring-blue-500;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) { /* sm */
+    .container {
+        @apply max-w-sm;
+    }
+}
+
+@media (min-width: 768px) { /* md */
+    .container {
+       @apply max-w-md;
+    }
+}
+
+@media (min-width: 1024px) { /* lg */
+    .container {
+        @apply max-w-lg;
+    }
+}
+
+
+@media (min-width: 1280px) { /* xl */
+    .container {
+        @apply max-w-xl;
+    }
+}
