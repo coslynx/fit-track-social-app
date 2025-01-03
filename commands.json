@@ -1,0 +1,153 @@
+{
+  "commands": [
+    {
+      "name": "register",
+      "description": "Register a new user.",
+      "options": [
+        {
+          "name": "email",
+          "description": "Email address for the new user.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "password",
+          "description": "Password for the new user.",
+          "type": "string",
+          "required": true
+        },
+         {
+          "name": "name",
+          "description": "Name for the new user.",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "handler": "registerUser"
+    },
+    {
+      "name": "login",
+      "description": "Login an existing user.",
+      "options": [
+        {
+          "name": "email",
+          "description": "Email address for the user.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "password",
+          "description": "Password for the user.",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "handler": "loginUser"
+    },
+     {
+      "name": "logout",
+      "description": "Logout the current user.",
+      "options": [],
+      "handler": "logoutUser"
+    },
+    {
+      "name": "createGoal",
+      "description": "Create a new goal.",
+      "options": [
+        {
+          "name": "name",
+          "description": "Name of the goal.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "description",
+           "description": "Description of the goal.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "targetDate",
+          "description": "Target date for the goal (YYYY-MM-DD).",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "targetValue",
+          "description": "Target value for the goal.",
+          "type": "number",
+          "required": true
+        }
+      ],
+       "handler": "createGoal"
+    },
+    {
+      "name": "listGoals",
+      "description": "List all goals for the current user.",
+      "options": [],
+      "handler": "listGoals"
+    },
+     {
+      "name": "updateGoal",
+      "description": "Update an existing goal.",
+      "options": [
+        {
+          "name": "id",
+          "description": "ID of the goal to update.",
+          "type": "string",
+          "required": true
+        },
+         {
+          "name": "name",
+          "description": "Updated name of the goal.",
+           "type": "string",
+          "required": false
+        },
+        {
+          "name": "description",
+          "description": "Updated description of the goal.",
+           "type": "string",
+          "required": false
+        },
+        {
+          "name": "targetDate",
+          "description": "Updated target date for the goal (YYYY-MM-DD).",
+           "type": "string",
+          "required": false
+        },
+        {
+          "name": "targetValue",
+          "description": "Updated target value for the goal.",
+          "type": "number",
+          "required": false
+         },
+          {
+           "name": "completed",
+            "description": "Set goal completed status",
+            "type": "boolean",
+            "required": false
+          }
+      ],
+      "handler": "updateGoal"
+    },
+    {
+      "name": "deleteGoal",
+      "description": "Delete a goal by ID.",
+      "options": [
+        {
+          "name": "id",
+          "description": "ID of the goal to delete.",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "handler": "deleteGoal"
+    },
+    {
+        "name": "version",
+        "description": "Display the application version.",
+        "options": [],
+         "handler": "showVersion"
+    }
+  ]
+}
